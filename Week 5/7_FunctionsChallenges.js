@@ -27,6 +27,22 @@ console.log(prependToString("Beyza!", "Welcome to Techtonica, "))
 // Examples:
 // stringIncludes('awesome', 'e'); // --> true
 // stringIncludes('awesome', 'z'); // --> false
+function stringIncludes(str1, str2){
+    let count = 0; 
+    for (let index = 0; index < str1.length; index++) {
+        if(str1[index]==str2){
+            count++
+        }      
+    }
+    if (count > 0) {
+        return true
+    }
+    else{
+        return false
+    }
+}
+console.log(stringIncludes('awesome', 'w'))
+
 
 // Exercise 3. Write a function called stringLastIndexOf, which accepts two strings: the first is a word and the second is a single character.
 // The function should return the last index at which the character exists or -1 if the character is not found.
