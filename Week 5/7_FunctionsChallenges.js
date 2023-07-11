@@ -15,6 +15,11 @@
 // prependToString('awesome', 'very') // --> 'veryawesome'
 // prependToString('world', 'hello ') // --> 'hello world'
 // prependToString('nothing', '') // --> 'nothing'
+function prependToString(str1, str2) {
+    return str2 + str1
+}
+console.log(prependToString("Beyza!", "Welcome to Techtonica, "))
+
 
 // Exercise 2. Write a function called stringIncludes, which accepts two strings: the first string is a word and the second string is a single character.
 // The function should return true if the first string includes the character, otherwise it should return false.
