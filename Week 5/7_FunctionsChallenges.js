@@ -50,6 +50,18 @@ console.log(stringIncludes('awesome', 'w'))
 // Examples:
 // stringLastIndexOf('awesome', 'e'); // --> 6
 // stringLastIndexOf('awesome', 'z'); // --> -1
+function stringLastIndexOf(str1, str2){
+    let count = 0; 
+    for (let index = str1.length - 1; index >= 0; index--) {
+        if(str1[index]==str2){
+            return index
+        }      
+    }
+    return -1
+}
+console.log(stringLastIndexOf('awesome', 'e'))
+console.log(stringLastIndexOf('awesome', 'z'))
+
 
 // Exercise 4. Write a function called removeFromString, which accepts a string, a starting index (number) and a number of characters to remove.
 // The function should return a new string with the characters removed.
