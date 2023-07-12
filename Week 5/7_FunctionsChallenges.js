@@ -129,3 +129,32 @@ console.log(indexOf(arr3, 10)); // --> -1
 // includes('abcd', 'b') // --> true
 // includes('abcd', 'e') // --> false
 // includes('abcd', 'a', 2) // --> false
+
+
+function includes(collection, value, startingIndex = 0){
+    if(Array.isArray(collection) || typeof collection === 'string'){
+        for (let index = startingIndex; index < collection.length; index++) {
+            if(collection[index] == value){
+                return true
+            }
+        }
+        return false
+    }
+    else{
+        for(let x in collection){
+            if(collection[x] == value){
+                return true
+            }
+        }
+        return false
+    }  
+}
+
+console.log(includes([1, 2, 3], 1)) // --> true
+console.log(includes([1, 2, 3], 1, 2)) // --> false
+console.log(includes([1, 2, 3], 6)) // --> false
+console.log(includes({ 'a': 1, 'b': 2 }, 1)) // --> true
+console.log(includes({ 'a': 1, 'b': 2 }, 'a')) // --> false
+console.log(includes('abcd', 'b')) // --> true
+console.log(includes('abcd', 'e')) // --> false
+console.log(includes('abcd', 'a', 2)) // --> false
