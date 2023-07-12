@@ -71,6 +71,26 @@ console.log(stringLastIndexOf('awesome', 'z'))
 // removeFromString('Hello School', 0, 6) // --> 'School'
 // removeFromString('Hello School', 2, 4) // --> 'HeSchool'
 // removeFromString('Hello School', 6, 400) // --> 'Hello '
+function removeFromString(str, starPoint, among){
+    let newStr = ""
+
+    if(starPoint>0){
+        for (let index = 0; index < starPoint; index++) {
+            newStr += str[index]            
+        }
+    }
+    for (let index = starPoint + among; index < str.length; index++) {
+        newStr += str[index]            
+    }
+    return newStr
+    
+}
+console.log(removeFromString('Elie', 2, 2)) // --> 'El'
+console.log(removeFromString('Elie', 0, 1)) // --> 'lie'
+console.log(removeFromString('Hello School', 0, 6)) // --> 'School'
+console.log(removeFromString('Hello School', 2, 4)) // --> 'HeSchool'
+console.log(removeFromString('Hello School', 6, 400)) // --> 'Hello '
+
 
 // Exercise 5. Write a function called indexOf, which accepts an array and a number.
 // The function should return the first index at which the value exists or -1 if the value is not found.
